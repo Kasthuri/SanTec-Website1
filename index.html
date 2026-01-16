@@ -2,32 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SanTec Sanierung Ost GmbH</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>SanTec Sanierung Ost GmbH</h1>
-    <nav>
-      <a href="#about">Ihr Partner für Sanierung & Renovierung</a>
-      <a href="#contact">Contact</a>
-    </nav>
+   <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">SanTec Sanierung Ost GmbH</a>
+      <nav class="nav">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
   </header>
-
-  <main>
-    <section id="about">
-      <h2>About me</h2>
-      <p>I am learning how to build websites from scratch.</p>
+<main id="top">
+    <section class="hero">
+      <div class="container">
+        <h1>Sanierung & Renovierung aus einer Hand</h1>
+        <p>Ihr Partner für Sanierung, Renovierung und Instandsetzung – zuverlässig, sauber und termintreu.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#kontakt">Angebot anfragen</a>
+          <a class="btn" href="#leistungen">Leistungen ansehen</a>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can write anything you want here.</p>
+    <section id="leistungen" class="section">
+      <div class="container">
+        <h2>Leistungen</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Sanierung</h3>
+            <p>Schadenbeseitigung, Instandsetzung und Modernisierung.</p>
+          </div>
+          <div class="card">
+            <h3>Renovierung</h3>
+            <p>Malerarbeiten, Boden, Trockenbau und Innenausbau.</p>
+          </div>
+          <div class="card">
+            <h3>Beratung</h3>
+            <p>Planung, Materialauswahl und transparente Angebote.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ueber-uns" class="section">
+      <div class="container">
+        <h2>Über uns</h2>
+        <p>
+          SanTec Sanierung Ost GmbH steht für saubere Ausführung, klare Kommunikation und termingerechte Umsetzung.
+          Wir betreuen Projekte für Privatkunden und Gewerbe – vom ersten Gespräch bis zur Abnahme.
+        </p>
+        <ul class="bullets">
+          <li>Zuverlässige Terminplanung</li>
+          <li>Saubere Baustelle & Qualitätskontrolle</li>
+          <li>Transparente Kosten</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <p>Schreiben Sie uns oder rufen Sie an. Wir melden uns kurzfristig zurück.</p>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>Telefon</h3>
+            <p><a href="tel:+491234567890">+49 123 4567890</a></p>
+          </div>
+          <div class="contact-box">
+            <h3>E-Mail</h3>
+            <p><a href="mailto:info@santec.example">info@santec.example</a></p>
+          </div>
+          <div class="contact-box">
+            <h3>Adresse</h3>
+            <p>Ihre Straße 1<br>PLZ Ort</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 My Website</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 SanTec Sanierung Ost GmbH</p>
+    </div>
   </footer>
 </body>
 </html>
