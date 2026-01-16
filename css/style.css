@@ -131,6 +131,10 @@ textarea {
   }
 }
 
+.form-grid .full {
+  grid-column: 1 / -1;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid #eee;
