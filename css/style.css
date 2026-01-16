@@ -76,6 +76,10 @@ a:hover { text-decoration: underline; }
 
 .bullets { padding-left: 18px; }
 .bullets li { margin: 8px 0; }
+.wallpaper {
+  height: 100vh;
+  background: url("images/wallpaper.jpg") center / cover no-repeat;
+}
 
 /* Contact */
 .contact-grid {
