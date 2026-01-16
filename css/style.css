@@ -13,6 +13,7 @@ a:hover { text-decoration: underline; }
 .container {
   width: min(1000px, 92%);
   margin: 0 auto;
+  text-align: center;
 }
 
 /* Header */
@@ -26,11 +27,12 @@ a:hover { text-decoration: underline; }
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px; 
   padding: 18px 0;
 }
 .brand { font-weight: 700; }
-.nav a { margin-left: 18px; opacity: 0.9; }
+.nav a { margin: 0 12px; opacity: 0.9; }
 .nav a:hover { opacity: 1; }
 
 /* Hero */
@@ -64,6 +66,7 @@ a:hover { text-decoration: underline; }
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 .card {
   border: 1px solid #e6e6e6;
@@ -80,11 +83,18 @@ a:hover { text-decoration: underline; }
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 .contact-box {
   border: 1px solid #e6e6e6;
   border-radius: 14px;
   padding: 16px;
+}
+
+.bullets {
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0;
 }
 
 /* Footer */
