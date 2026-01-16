@@ -78,7 +78,7 @@ a:hover { text-decoration: underline; }
 .bullets li { margin: 8px 0; }
 .wallpaper {
   height: 100vh;
-  background: url("images/wallpaper.jpg") center / cover no-repeat;
+  background: url("wallpaper.jpg") center / cover no-repeat;
 }
 /* Contact */
 .contact-grid {
