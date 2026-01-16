@@ -56,7 +56,14 @@ a:hover { text-decoration: underline; }
   background: #222;
   color: #fff;
 }
-
+button.btn {
+  cursor: pointer;
+  border: none;
+  font: inherit;
+}
+button.btn:hover {
+  opacity: 0.9;
+}
 /* Sections */
 .section { padding: 48px 0; }
 .section h2 { margin-top: 0; }
