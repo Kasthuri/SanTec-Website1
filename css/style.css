@@ -80,7 +80,6 @@ a:hover { text-decoration: underline; }
   height: 100vh;
   background: url("images/wallpaper.jpg") center / cover no-repeat;
 }
-
 /* Contact */
 .contact-grid {
   display: grid;
