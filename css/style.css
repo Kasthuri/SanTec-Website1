@@ -63,6 +63,7 @@ button.btn {
   -webkit-appearance: none;
 }
 button.btn:hover {
+  text-decoration: none;
   opacity: 0.9;
 }
 /* Sections */
