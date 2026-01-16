@@ -57,9 +57,10 @@ a:hover { text-decoration: underline; }
   color: #fff;
 }
 button.btn {
-  cursor: pointer;
-  border: none;
-  font: inherit;
+   cursor: pointer;
+   font: inherit;
+   appearance: none;
+  -webkit-appearance: none;
 }
 button.btn:hover {
   opacity: 0.9;
