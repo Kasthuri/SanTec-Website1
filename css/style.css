@@ -87,7 +87,7 @@ button.btn:hover {
 .bullets li { margin: 8px 0; }
 .wallpaper {
   height: 100vh;
-  background: url("../wallpaper.jpg") center / contain no-repeat;
+  background: url("../images/wallpaper.jpg") center / contain no-repeat;
 }
 /* Contact */
 .contact-grid {
