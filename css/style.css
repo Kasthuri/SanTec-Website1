@@ -294,6 +294,16 @@ ul li {
   display: block;
   margin-bottom: 14px;
 }
+/* Force reverse layout to stay in the same row */
+.service--reverse .service-text{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.service--reverse .service-gallery{
+  grid-column: 1;
+  grid-row: 1;
+}
 /* Footer */
 .site-footer {
   border-top: 1px solid #eee;
