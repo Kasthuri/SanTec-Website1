@@ -158,6 +158,20 @@ textarea {
 }
 /* Datenschutz bullets */
 
+.legal { 
+  text-align: left; 
+}
+
+.legal ul {
+  margin: 12px auto;
+  padding-left: 22px;
+  list-style-position: outside;
+}
+
+.legal li {
+  margin: 6px 0;
+}
+
 ul {
   margin: 12px 0;
   padding-left: 20px;
