@@ -200,7 +200,17 @@ textarea {
 }
 .service--reverse .service-text { grid-column: 2; }
 .service--reverse .service-gallery { grid-column: 1; }
+.service--reverse .service-grid{  grid-template-columns: 1.4fr 1fr;  /* gallery wide on left, text narrow on right */}
 
+.service--reverse .service-gallery{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.service--reverse .service-text{
+  grid-column: 2;
+  grid-row: 1;
+}
 .gal-img{
   width: 100%;
   height: 420px;
