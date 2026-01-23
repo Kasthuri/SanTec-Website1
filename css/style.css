@@ -36,7 +36,7 @@ a:hover { text-decoration: underline; }
 main {
   padding-top: 80px;
 }
-
+.site-header { z-index: 1000; }
 /* Hero */
 .hero {
   background: #f4f4f4;
