@@ -301,7 +301,9 @@ ul li {
   background: #fafafa;
   text-align: center;
 }
-
+.service-grid{ outline: 2px solid red; }
+.service-text{ outline: 2px solid blue; }
+.service-gallery{ outline: 2px solid green; }
 /* Mobile */
 @media (max-width: 800px) {
   .cards, .contact-grid { grid-template-columns: 1fr; }
