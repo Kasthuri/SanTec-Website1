@@ -28,7 +28,7 @@
       </div>
     </section>
 <section class="wallpaper"></section>
-  <section class="service" id="sanierung">
+  <section class="service reveal" id="sanierung">
   <div class="container service-grid">
     <div class="service-text">
       <h2>Sanierung</h2>
@@ -50,7 +50,7 @@
     </div>
   </div>
        </section>
-          <section class="service service--reverse" id="renovierung">
+          <section class="service service--reverse reveal" id="renovierung">
   <div class="container service-grid">
     <div class="service-text">
       <h2>Renovierung</h2>
@@ -74,7 +74,7 @@ Ob einzelne Räume oder komplette Objekte: Wir setzen Ihre Wünsche professionel
     </div>
     </div>
        </section>
-         <section class="service" id="beratung">
+         <section class="service reveal" id="beratung">
   <div class="container service-grid">
     <div class="service-text">
             <h2>Beratung</h2>
@@ -188,6 +188,16 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
     prev.addEventListener("click", () => show(i - 1));
     next.addEventListener("click", () => show(i + 1));
   });
+</script>
+  <script>
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) e.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
+
+  items.forEach(el => io.observe(el));
 </script>
 </body>
 </html>
