@@ -193,6 +193,14 @@ ul li {
   line-height: 1.6;
 }
 
+.section:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.section {
+  padding: 70px 0;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid #eee;
