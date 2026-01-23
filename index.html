@@ -162,5 +162,30 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
       <p>© 2026 SanTec Sanierung Ost GmbH</p>
     </div>
   </footer>
+    <script>
+  const galleries = {
+    sanierung: ["images/sanierung-1.jpg", "images/sanierung-2.jpg", "images/sanierung-3.jpg"],
+    renovierung: ["images/renovierung-1.jpg", "images/renovierung-2.jpg", "images/renovierung-3.jpg"],
+    beratung: ["images/beratung-1.jpg", "images/beratung-2.jpg", "images/beratung-3.jpg"]
+  };
+
+  document.querySelectorAll(".service-gallery").forEach(gal => {
+    const key = gal.dataset.gallery;
+    const img = gal.querySelector(".gal-img");
+    const prev = gal.querySelector(".prev");
+    const next = gal.querySelector(".next");
+
+    let i = 0;
+
+    function show(n){
+      const list = galleries[key];
+      i = (n + list.length) % list.length;
+      img.src = list[i];
+    }
+
+    prev.addEventListener("click", () => show(i - 1));
+    next.addEventListener("click", () => show(i + 1));
+  });
+</script>
 </body>
 </html>
