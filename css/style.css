@@ -234,7 +234,9 @@ textarea {
     height: 260px;
   }
 }
-
+.service { position: relative; z-index: 0; }
+.service-gallery { position: relative; overflow: hidden; }
+.gal-btn { z-index: 2; }
 /* Datenschutz bullets */
 
 .legal { 
