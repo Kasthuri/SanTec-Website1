@@ -222,19 +222,6 @@ textarea {
 .service-text h2 {
   text-align: center;
 }
-
-/* Center paragraphs & lists */
-.service-text p,
-.service-text ul {
-  text-align: center;
-}
-
-/* Center bullet points nicely */
-.service-text ul {
-  list-style-position: inside;
-  padding-left: 0;
-}
-
 /* Center the button */
 .service-text .btn {
   align-self: center;
