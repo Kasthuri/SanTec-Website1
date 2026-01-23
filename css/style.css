@@ -1,5 +1,8 @@
 { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.5;
@@ -103,7 +106,16 @@ button.btn:hover {
 .hero {
   background: linear-gradient(to bottom, #f4f4f4, #ffffff);
 }
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: 0.6s ease;
+}
 
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Contact */
 .contact-grid {
   display: grid;
