@@ -33,6 +33,9 @@ a:hover { text-decoration: underline; }
 .brand { font-weight: 700; }
 .nav a { margin: 0 12px; opacity: 0.9; }
 .nav a:hover { opacity: 1; }
+main {
+  padding-top: 80px;
+}
 
 /* Hero */
 .hero {
@@ -195,6 +198,8 @@ textarea {
   border: 1px solid #e6e6e6;
   background: #fff;
 }
+.service--reverse .service-text { grid-column: 2; }
+.service--reverse .service-gallery { grid-column: 1; }
 
 .gal-img{
   width: 100%;
