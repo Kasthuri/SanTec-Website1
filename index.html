@@ -192,6 +192,34 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
       <p>© 2026 SanTec Sanierung Ost GmbH</p>
     </div>
   </footer>
+  <!-- Legal floating button -->
+<div class="fab-legal" aria-label="Rechtliches">
+  <button class="fab-btn" type="button" aria-label="Rechtliches öffnen" aria-expanded="false">
+    §
+  </button>
+
+  <div class="fab-menu" role="menu" aria-label="Rechtliches">
+    <a role="menuitem" href="impressum.html">Impressum</a>
+    <a role="menuitem" href="datenschutz.html">Datenschutz</a>
+  </div>
+</div>
+  <script>
+  const legalFab = document.querySelector(".fab-legal");
+  const legalBtn = legalFab?.querySelector(".fab-btn");
+
+  legalBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const open = legalFab.classList.toggle("is-open");
+    legalBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  document.addEventListener("click", () => {
+    if (!legalFab) return;
+    legalFab.classList.remove("is-open");
+    legalBtn?.setAttribute("aria-expanded", "false");
+  });
+</script>
+  
     <script>
   const galleries = {
     sanierung: ["images/sanierung-1.jpg", "images/sanierung-2.jpg", "images/sanierung-3.jpg"],
