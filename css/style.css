@@ -534,11 +534,14 @@ a[href^="tel"]:hover{
 .fab-stack a.fab-btn:hover{
   text-decoration: none !important;
 }
+/* Phone number styling (Kontakt section only) */
 #kontakt a[href^="tel"]{
-  text-decoration: underline;
-  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 #kontakt a[href^="tel"]:hover{
   text-decoration: underline;
+  color: #1f6feb; /* blue like email */
 }
