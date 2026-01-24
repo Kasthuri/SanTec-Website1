@@ -228,23 +228,6 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
     });
   });
 </script>
-  <script>
-  const legalFab = document.querySelector(".fab-legal");
-  const legalBtn = legalFab?.querySelector(".fab-btn");
-
-  legalBtn?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const open = legalFab.classList.toggle("is-open");
-    legalBtn.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
-  document.addEventListener("click", () => {
-    if (!legalFab) return;
-    legalFab.classList.remove("is-open");
-    legalBtn?.setAttribute("aria-expanded", "false");
-  });
-</script>
-  
     <script>
   const galleries = {
     sanierung: ["images/sanierung-1.jpg", "images/sanierung-2.jpg", "images/sanierung-3.jpg"],
