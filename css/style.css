@@ -109,9 +109,8 @@ a:hover{ text-decoration: underline; }
   align-items: center;
   color: #fff;
 
-  /* Change to your real hero image path */
-  background: url("../images/hero.jpg") 
-  background-size: cover;   
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 60% 25%;
 }
@@ -121,9 +120,9 @@ a:hover{ text-decoration: underline; }
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(15,17,21,0.55) 0%,
-    rgba(15,17,21,0.35) 45%,
-    rgba(15,17,21,0.55) 100%
+    rgba(0,0,0,0.35) 0%,
+    rgba(0,0,0,0.15) 45%,
+    rgba(0,0,0,0.35) 100%
   );
 }
 
