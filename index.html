@@ -7,27 +7,52 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top">Sanierung & Renovierung aus einer Hand</a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </nav>
-    </div>
-  </header>
+ <header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">SanTec</span>
+      <span class="brand-sub">Sanierung & Renovierung aus einer Hand</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="siteNav">
+      <a href="#top" class="is-active">Home</a>
+      <a href="#sanierung">Sanierung</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</header>
+
 <main id="top">
-    <section class="hero">
-      <div class="container">
+  <section class="hero hero--image">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-panel">
         <h1>SanTec Sanierung Ost GmbH</h1>
-        <p>Ihr Partner für Sanierung, Renovierung und Instandsetzung – zuverlässig, sauber und termintreu.</p>
-       <div class="buttons">
+        <p>
+          Ihr Partner für Sanierung, Renovierung und Instandsetzung –
+          zuverlässig, sauber und termintreu.
+        </p>
+
+        <div class="buttons">
           <a class="btn primary" href="#kontakt">Angebot anfragen</a>
+          <a class="btn ghost" href="#sanierung">Leistungen</a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge">Termintreu</div>
+          <div class="badge">Saubere Arbeit</div>
+          <div class="badge">Festpreise</div>
         </div>
       </div>
-    </section>
-<section class="wallpaper"></section>
+    </div>
+  </section>
   <section class="service reveal" id="sanierung">
   <div class="container service-grid">
     <div class="service-text">
