@@ -493,12 +493,15 @@ width: 56px;
 }
 
 .fab-menu a{
-  display: block;
-  padding: 10px 12px;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #111;}
+display: none;
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);  
+}
 
 .fab-menu a:hover{
   background: rgba(31,111,235,0.10);
