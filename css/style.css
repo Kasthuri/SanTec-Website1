@@ -103,8 +103,15 @@ a:hover{ text-decoration: underline; }
 
 /* ============== Hero ============== */
 
+/* Move hero panel left (without breaking layout) */
+.hero-panel{
+  transform: translateX(-120px);
+}
+
 @media (max-width: 980px){
-  .hero-panel{ margin-right: 0; }
+  .hero-panel{
+    transform: none;
+  }
 }
 .hero--image{
   position: relative;
