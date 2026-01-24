@@ -224,5 +224,30 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
 
   items.forEach(el => io.observe(el));
 </script>
+  <script>
+  // Mobile nav toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#siteNav");
+  toggle?.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // Header solid on scroll (matches “overlay header” style)
+  const header = document.querySelector("#siteHeader");
+  const setHeader = () => {
+    if (window.scrollY > 10) header.classList.add("is-solid");
+    else header.classList.remove("is-solid");
+  };
+  setHeader();
+  window.addEventListener("scroll", setHeader);
+
+  // Your existing reveal observer (keep)
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
+  }, { threshold: 0.15 });
+  items.forEach(el => io.observe(el));
+</script>
 </body>
 </html>
