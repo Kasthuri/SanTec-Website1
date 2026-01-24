@@ -143,7 +143,7 @@ a:hover{ text-decoration: underline; }
   backdrop-filter: blur(12px);
 
   /* Move panel left (choose ONE method) */
-  transform: translateX(-120px);
+  transform: translateX(-200px);
 }
 
 .hero-panel h1{
