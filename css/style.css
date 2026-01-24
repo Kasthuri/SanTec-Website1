@@ -534,3 +534,11 @@ a[href^="tel"]:hover{
 .fab-stack a.fab-btn:hover{
   text-decoration: none !important;
 }
+#kontakt a[href^="tel"]{
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#kontakt a[href^="tel"]:hover{
+  text-decoration: underline;
+}
