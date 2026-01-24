@@ -190,17 +190,22 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
   
   <!-- Legal floating button -->
 <div class="fab-stack">
-  <div class="fab fab-contact">
+
+  <!-- Contact Button -->
+  <div class="fab">
     <a class="fab-btn" href="#kontakt" aria-label="Kontakt">✉</a>
   </div>
 
-  <div class="fab fab-legal">
-    <button class="fab-btn" type="button" aria-label="Rechtliches öffnen" aria-expanded="false">§</button>
+  <!-- Legal Button -->
+  <div class="fab">
+    <button class="fab-btn" type="button" aria-label="Rechtliches">§</button>
+
     <div class="fab-menu">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </div>
   </div>
+
 </div>
   <div class="fab fab-contact" aria-label="Kontakt">
   <button class="fab-btn" type="button" aria-label="Kontakt öffnen" aria-expanded="false">☎</button>
@@ -309,6 +314,22 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
   }, { threshold: 0.15 });
   items.forEach(el => io.observe(el));
+</script>
+  <script>
+  document.querySelectorAll(".fab").forEach(fab => {
+    const btn = fab.querySelector(".fab-btn");
+    btn?.addEventListener("click", (e) => {
+      if (!fab.querySelector(".fab-menu")) return;
+      e.preventDefault();
+      e.stopPropagation();
+      fab.classList.toggle("is-open");
+    });
+  });
+
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".fab.is-open")
+      .forEach(fab => fab.classList.remove("is-open"));
+  });
 </script>
 </body>
 </html>
