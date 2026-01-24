@@ -305,11 +305,14 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
   }, { threshold: 0.15 });
   items.forEach(el => io.observe(el));
 </script>
-  <script>
+<script>
   document.querySelectorAll(".fab").forEach(fab => {
     const btn = fab.querySelector(".fab-btn");
-    btn?.addEventListener("click", (e) => {
-      if (!fab.querySelector(".fab-menu")) return;
+    const menu = fab.querySelector(".fab-menu");
+
+    if (!menu) return;
+
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       fab.classList.toggle("is-open");
