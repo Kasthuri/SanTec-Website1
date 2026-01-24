@@ -104,8 +104,11 @@ a:hover{ text-decoration: underline; }
 /* ============== Hero ============== */
 .hero-panel h1{
   white-space: nowrap;
+  margin-right: 90px;
 }
-
+@media (max-width: 980px){
+  .hero-panel{ margin-right: 0; }
+}
 .hero--image{
   position: relative;
   min-height: 88vh;
@@ -240,6 +243,7 @@ h2{ color: var(--dark); margin-top: 0; }
   border: 1px solid rgba(0,0,0,0.06);
   background: #fff;
   box-shadow: var(--shadow);
+  height: 420px; 
 }
 
 .gal-img{
@@ -366,6 +370,24 @@ form button[type="submit"]:hover{
   background: var(--accent);
   border-color: var(--accent);
 }
+
+/* Center section headings + intro text */
+#ueber-uns .container,
+#kontakt .container{
+  text-align: center;
+}
+
+/* Keep bullets readable (left-aligned) while block is centered */
+#ueber-uns .bullets{
+  display: inline-block;
+  text-align: left;
+  margin: 12px auto 0;
+}
+
+/* Keep form readable (left labels), but centered on page */
+#kontakt form{
+  text-align: left;
+}
 /* ============== Footer ============== */
 .site-footer{
   border-top: 1px solid #eee;
@@ -491,9 +513,9 @@ width: 56px;
   height: 12px;
 }
 /* Open on hover (desktop) */
-@media (hover: hover){
-  .fab:hover .fab-menu{ display: block; }
+@media (max-width: 980px){
+  .service-gallery{ height: 260px; }
+  .gal-img{ height: 100%; }
 }
-
 /* Open on click (mobile + desktop) */
 .fab.is-open .fab-menu{ display: block; }
