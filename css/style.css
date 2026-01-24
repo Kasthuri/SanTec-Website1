@@ -40,7 +40,15 @@ a:hover { text-decoration: underline; }
 .site-header a{
   color: #fff;
 }
+.site-header .brand{
+  text-decoration: none;
+  color: #fff;
+}
 
+.site-header .brand:hover{
+  text-decoration: none;
+  color: #fff;   /* prevents hover color change */
+}
 .site-header a:hover{
   color: var(--accent);
 }
@@ -137,8 +145,8 @@ button.btn:hover {
 }
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: 0.6s ease;
+  transform: translateY(24px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 .reveal.show {
