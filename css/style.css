@@ -529,3 +529,8 @@ a[href^="tel"]:hover{
 }
 /* Open on click (mobile + desktop) */
 .fab.is-open .fab-menu{ display: block; }
+/* No underline on floating buttons */
+.fab-stack a.fab-btn,
+.fab-stack a.fab-btn:hover{
+  text-decoration: none !important;
+}
