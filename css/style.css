@@ -104,13 +104,16 @@ a:hover{ text-decoration: underline; }
 /* ============== Hero ============== */
 .hero--image{
   position: relative;
-  min-height: 78vh;
+  min-height: 82vh;
   display: flex;
   align-items: center;
   color: #fff;
 
   /* Change to your real hero image path */
-  background: url("../images/hero.jpg") center / cover no-repeat;
+  background: url("../images/hero.jpg") 
+  background-size: cover;   
+  background-repeat: no-repeat;
+  background-position: 60% 25%;
 }
 
 .hero-overlay{
