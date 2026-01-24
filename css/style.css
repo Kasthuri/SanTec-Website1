@@ -102,6 +102,10 @@ a:hover{ text-decoration: underline; }
 }
 
 /* ============== Hero ============== */
+.hero-panel h1{
+  white-space: nowrap;
+}
+
 .hero--image{
   position: relative;
   min-height: 88vh;
