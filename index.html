@@ -192,17 +192,56 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
       <p>© 2026 SanTec Sanierung Ost GmbH</p>
     </div>
   </footer>
+  
   <!-- Legal floating button -->
-<div class="fab-legal" aria-label="Rechtliches">
-  <button class="fab-btn" type="button" aria-label="Rechtliches öffnen" aria-expanded="false">
-    §
-  </button>
+<div class="fab-stack" aria-label="Schnellzugriff">
 
-  <div class="fab-menu" role="menu" aria-label="Rechtliches">
-    <a role="menuitem" href="impressum.html">Impressum</a>
-    <a role="menuitem" href="datenschutz.html">Datenschutz</a>
+  <!-- Contact FAB (direct to section) -->
+  <div class="fab fab-contact">
+    <a class="fab-btn" href="#kontakt" aria-label="Kontakt">✉</a>
+  </div>
+
+  <!-- Legal FAB (hover menu on desktop, tap on mobile) -->
+  <div class="fab fab-legal" aria-label="Rechtliches">
+    <button class="fab-btn" type="button" aria-label="Rechtliches öffnen" aria-expanded="false">§</button>
+    <div class="fab-menu" role="menu" aria-label="Rechtliches">
+      <a role="menuitem" href="impressum.html">Impressum</a>
+      <a role="menuitem" href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+
+</div>
+  <div class="fab fab-contact" aria-label="Kontakt">
+  <button class="fab-btn" type="button" aria-label="Kontakt öffnen" aria-expanded="false">☎</button>
+
+  <div class="fab-menu" role="menu" aria-label="Kontakt">
+    <a role="menuitem" href="tel:+491752457654">Anrufen</a>
+    <a role="menuitem" href="mailto:santec.herzog@gmail.com">E-Mail</a>
+    <a role="menuitem" href="#kontakt">Kontaktformular</a>
   </div>
 </div>
+  <script>
+  // Tap/click open for mobile (hover doesn't exist)
+  document.querySelectorAll(".fab").forEach(fab => {
+    const btn = fab.querySelector("button.fab-btn");
+    if (!btn) return;
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = fab.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  // Click outside closes any open menu
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".fab.is-open").forEach(fab => {
+      fab.classList.remove("is-open");
+      const btn = fab.querySelector("button.fab-btn");
+      btn?.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
   <script>
   const legalFab = document.querySelector(".fab-legal");
   const legalBtn = legalFab?.querySelector(".fab-btn");
