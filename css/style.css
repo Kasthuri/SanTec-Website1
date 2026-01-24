@@ -433,7 +433,16 @@ form button[type="submit"]:hover{
   bottom: 18px;
   z-index: 2000;
 }
-
+.fab-stack{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
 .fab-btn{
   width: 54px;
   height: 54px;
@@ -445,6 +454,9 @@ form button[type="submit"]:hover{
   font-weight: 900;
   font-size: 18px;
   line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fab-btn:hover{ filter: brightness(0.98); }
@@ -454,12 +466,16 @@ form button[type="submit"]:hover{
   right: 0;
   bottom: 64px;
   display: none;
-  min-width: 170px;
+  min-width: 180px;
   padding: 10px;
   border-radius: 14px;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.10);
   box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+/* Base button */
+.fab{
+  position: relative;
 }
 
 .fab-menu a{
@@ -478,8 +494,8 @@ form button[type="submit"]:hover{
 
 /* Open on hover (desktop) */
 @media (hover: hover){
-  .fab-legal:hover .fab-menu{ display: block; }
+  .fab:hover .fab-menu{ display: block; }
 }
 
 /* Open on click (mobile + desktop) */
-.fab-legal.is-open .fab-menu{ display: block; }
+.fab.is-open .fab-menu{ display: block; }
