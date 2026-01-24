@@ -206,119 +206,12 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
   </div>
 
 </div>
-  <div class="fab fab-contact" aria-label="Kontakt">
-  <button class="fab-btn" type="button" aria-label="Kontakt öffnen" aria-expanded="false">☎</button>
-
-  <div class="fab-menu" role="menu" aria-label="Kontakt">
-    <a role="menuitem" href="tel:+491752457654">Anrufen</a>
-    <a role="menuitem" href="mailto:santec.herzog@gmail.com">E-Mail</a>
-    <a role="menuitem" href="#kontakt">Kontaktformular</a>
-  </div>
-</div>
-  <script>
-  // Tap/click open for mobile (hover doesn't exist)
-  document.querySelectorAll(".fab").forEach(fab => {
-    const btn = fab.querySelector("button.fab-btn");
-    if (!btn) return;
-
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const open = fab.classList.toggle("is-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-  });
-
-  // Click outside closes any open menu
-  document.addEventListener("click", () => {
-    document.querySelectorAll(".fab.is-open").forEach(fab => {
-      fab.classList.remove("is-open");
-      const btn = fab.querySelector("button.fab-btn");
-      btn?.setAttribute("aria-expanded", "false");
-    });
-  });
-</script>
-  <script>
-  const legalFab = document.querySelector(".fab-legal");
-  const legalBtn = legalFab?.querySelector(".fab-btn");
-
-  legalBtn?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const open = legalFab.classList.toggle("is-open");
-    legalBtn.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
-  document.addEventListener("click", () => {
-    if (!legalFab) return;
-    legalFab.classList.remove("is-open");
-    legalBtn?.setAttribute("aria-expanded", "false");
-  });
-</script>
-  
-    <script>
-  const galleries = {
-    sanierung: ["images/sanierung-1.jpg", "images/sanierung-2.jpg", "images/sanierung-3.jpg"],
-    renovierung: ["images/renovierung-1.jpg", "images/renovierung-2.jpg", "images/renovierung-3.jpg"],
-    beratung: ["images/beratung-1.jpg", "images/beratung-2.jpg", "images/beratung-3.jpg"]
-  };
-
-  document.querySelectorAll(".service-gallery").forEach(gal => {
-    const key = gal.dataset.gallery;
-    const img = gal.querySelector(".gal-img");
-    const prev = gal.querySelector(".prev");
-    const next = gal.querySelector(".next");
-
-    let i = 0;
-
-    function show(n){
-      const list = galleries[key];
-      i = (n + list.length) % list.length;
-      img.src = list[i];
-    }
-
-    prev.addEventListener("click", () => show(i - 1));
-    next.addEventListener("click", () => show(i + 1));
-  });
-</script>
-  <script>
-  const items = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting) e.target.classList.add('show');
-    });
-  }, { threshold: 0.15 });
-
-  items.forEach(el => io.observe(el));
-</script>
-  <script>
-  // Mobile nav toggle
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector("#siteNav");
-  toggle?.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
-  // Header solid on scroll (matches “overlay header” style)
-  const header = document.querySelector("#siteHeader");
-  const setHeader = () => {
-    if (window.scrollY > 10) header.classList.add("is-solid");
-    else header.classList.remove("is-solid");
-  };
-  setHeader();
-  window.addEventListener("scroll", setHeader);
-
-  // Your existing reveal observer (keep)
-  const items = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
-  }, { threshold: 0.15 });
-  items.forEach(el => io.observe(el));
-</script>
   <script>
   document.querySelectorAll(".fab").forEach(fab => {
     const btn = fab.querySelector(".fab-btn");
-    btn?.addEventListener("click", (e) => {
-      if (!fab.querySelector(".fab-menu")) return;
+    if (!btn || !fab.querySelector(".fab-menu")) return;
+
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       fab.classList.toggle("is-open");
