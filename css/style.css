@@ -626,3 +626,115 @@ h2{
   background:#fff;
   margin: 4px auto;
 }
+  /* === RESTORE SERVICES + KONTAKT LAYOUT (paste at END of css) === */
+
+/* Services: two-column layout */
+.service{
+  padding: 80px 0;
+}
+
+.service-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.4fr; /* text | gallery */
+  gap: 40px;
+  align-items: center;
+}
+
+/* Text should be left-aligned like your screenshot */
+.service-text{
+  text-align: left;
+  display: block;          /* cancels any flex centering */
+  max-width: none;         /* cancels earlier max-width that can squeeze */
+}
+
+/* Keep headings left (your screenshot) */
+.service-text h2{
+  text-align: left;
+}
+
+/* Keep button aligned left (your screenshot) */
+.service-text .btn{
+  align-self: auto;
+  margin-top: 14px;
+}
+
+/* Gallery block */
+.service-gallery{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.gal-img{
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Reverse section (Renovierung): gallery left, text right */
+.service--reverse .service-text{
+  grid-column: 2;
+  grid-row: 1;
+}
+.service--reverse .service-gallery{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px){
+  .service-grid{
+    grid-template-columns: 1fr;
+  }
+  .gal-img{
+    height: 260px;
+  }
+}
+
+/* Kontakt cards */
+.contact-grid{
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 18px;
+  justify-content: center;
+}
+
+.contact-box{
+  background: #fff;
+  border: 1px solid var(--line, #e8eaed);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Form layout exactly like your screenshot */
+form{
+  margin: 28px auto 0;
+  max-width: 720px;
+  background: #fff;
+  border: 1px solid var(--line, #e8eaed);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-align: left; /* important: labels align correctly */
+}
+
+.form-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  column-gap: 24px;
+}
+
+.form-grid .full{
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 700px){
+  .contact-grid{ grid-template-columns: 1fr; }
+  .form-grid{ grid-template-columns: 1fr; }
+}
