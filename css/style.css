@@ -512,6 +512,16 @@ width: 56px;
   bottom: -12px;
   height: 12px;
 }
+/* Remove underline from phone links */
+a[href^="tel"]{
+  text-decoration: none;
+  color: inherit;
+}
+
+a[href^="tel"]:hover{
+  text-decoration: none;
+  color: inherit;
+}
 /* Open on hover (desktop) */
 @media (max-width: 980px){
   .service-gallery{ height: 260px; }
