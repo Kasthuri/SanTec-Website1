@@ -206,26 +206,23 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
   </div>
 
 </div>
-  <script>
-  // Tap/click open for mobile (hover doesn't exist)
+<script>
+  // FAB menu toggle (only for the § button because only it has .fab-menu)
   document.querySelectorAll(".fab").forEach(fab => {
     const btn = fab.querySelector("button.fab-btn");
-    if (!btn) return;
+    const menu = fab.querySelector(".fab-menu");
+    if (!btn || !menu) return;
 
     btn.addEventListener("click", (e) => {
+      e.preventDefault();
       e.stopPropagation();
-      const open = fab.classList.toggle("is-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      fab.classList.toggle("is-open");
     });
   });
 
-  // Click outside closes any open menu
+  // Click outside closes any open FAB menu
   document.addEventListener("click", () => {
-    document.querySelectorAll(".fab.is-open").forEach(fab => {
-      fab.classList.remove("is-open");
-      const btn = fab.querySelector("button.fab-btn");
-      btn?.setAttribute("aria-expanded", "false");
-    });
+    document.querySelectorAll(".fab.is-open").forEach(fab => fab.classList.remove("is-open"));
   });
 </script>
     <script>
@@ -281,32 +278,6 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
   setHeader();
   window.addEventListener("scroll", setHeader);
 
-  // Your existing reveal observer (keep)
-  const items = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
-  }, { threshold: 0.15 });
-  items.forEach(el => io.observe(el));
 </script>
-<script>
-  document.querySelectorAll(".fab").forEach(fab => {
-    const btn = fab.querySelector(".fab-btn");
-    const menu = fab.querySelector(".fab-menu");
-
-    if (!menu) return;
-
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      fab.classList.toggle("is-open");
-    });
-  });
-
-  document.addEventListener("click", () => {
-    document.querySelectorAll(".fab.is-open")
-      .forEach(fab => fab.classList.remove("is-open"));
-  });
-</script>
-
 </body>
 </html>
