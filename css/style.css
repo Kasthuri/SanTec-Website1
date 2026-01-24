@@ -104,7 +104,7 @@ a:hover{ text-decoration: underline; }
 /* ============== Hero ============== */
 .hero--image{
   position: relative;
-  min-height: 82vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   color: #fff;
