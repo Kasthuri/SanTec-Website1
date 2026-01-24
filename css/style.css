@@ -466,7 +466,7 @@ form button[type="submit"]:hover{
 .fab-menu{
   position: absolute;
   right: 0;
-  bottom: 64px;
+  bottom: calc(54px + 8px);   /* sits above the button */
   display: none;
   min-width: 180px;
   padding: 10px;
@@ -478,6 +478,7 @@ form button[type="submit"]:hover{
 /* Base button */
 .fab{
   position: relative;
+  display: inline-block;
 }
 
 .fab-menu a{
@@ -486,14 +487,20 @@ form button[type="submit"]:hover{
   border-radius: 10px;
   font-weight: 700;
   text-decoration: none;
-  color: #111;
-}
+  color: #111;}
 
 .fab-menu a:hover{
   background: rgba(31,111,235,0.10);
   color: var(--accent);
 }
-
+.fab-menu::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;             /* bridge down to the button */
+  height: 10px;
+}
 /* Open on hover (desktop) */
 @media (hover: hover){
   .fab:hover .fab-menu{ display: block; }
