@@ -532,3 +532,9 @@ form button[type="submit"]:hover{
   color: var(--accent);
   text-decoration: underline;
 }
+/* Never underline floating action buttons */
+.fab-btn,
+.fab-btn:hover,
+.fab-btn:focus {
+  text-decoration: none !important;
+}
