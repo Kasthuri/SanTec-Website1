@@ -221,7 +221,7 @@ button.btn:hover {
 .bullets li { margin: 8px 0; }
 .wallpaper {
   height: 100vh;
-  background: url("images/hero.jpg") center / cover no-repeat;
+  background: url("images/wallpaper.jpg") center / cover no-repeat;
 }
 
 #leistungen {
