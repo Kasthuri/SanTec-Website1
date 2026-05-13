@@ -166,7 +166,7 @@ a:hover{ text-decoration: underline; }
 
 @media (max-width: 980px){
   .hero-panel{
-    transform: none; /* don’t shift on mobile */
+    transform: translateX(-40px);
   }
 }
 .buttons{ display: flex; gap: 12px; flex-wrap: wrap; }
