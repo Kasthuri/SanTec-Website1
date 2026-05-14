@@ -110,7 +110,7 @@ a:hover{ text-decoration: underline; }
   color: #fff;
 
   background-image: url("../images/hero.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 60% 25%;
 }
