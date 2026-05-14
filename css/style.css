@@ -143,7 +143,7 @@ a:hover{ text-decoration: underline; }
   backdrop-filter: blur(12px);
 
   /* Move panel left (choose ONE method) */
-  transform: translateX(-120px);
+  transform: translateX(-50px);
 }
 
 .hero-panel h1{
@@ -166,7 +166,7 @@ a:hover{ text-decoration: underline; }
 
 @media (max-width: 980px){
   .hero-panel{
-    transform: translateX(-40px);
+    transform: translateX(-20px);
   }
 }
 .buttons{ display: flex; gap: 12px; flex-wrap: wrap; }
