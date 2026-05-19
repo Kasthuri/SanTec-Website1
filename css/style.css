@@ -301,7 +301,7 @@ h2{ color: var(--dark); margin-top: 0; }
 .contact-grid{
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: 18px;
   justify-content: center;
 }
