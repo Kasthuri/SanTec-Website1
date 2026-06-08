@@ -309,6 +309,7 @@ h2{ color: var(--dark); margin-top: 0; }
 .contact-box{
   background: #fff;
   border: 1px solid var(--line);
+  justify-content: center;
   border-radius: 16px;
   padding: 22px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
