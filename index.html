@@ -143,22 +143,147 @@ Wir beraten Sie persönlich und transparent – von der ersten Idee bis zur Umse
       <div class="container">
         <h2>Kontakt</h2>
         <p>Schreiben Sie uns oder rufen Sie an. Wir melden uns kurzfristig zurück.</p>
-        <div class="contact-grid">
-          <div class="contact-box">
-            <h3>Bauabteilung</h3>
-            <p>
-                Andreas Riebow
-              <a href="tel:+491752457654">+49 175 2457654</a></p>
-          </div>
-         
-          <div class="contact-box">
-            <h3>Allgemeine Anfragen</h3>
-            <p><a href="mailto:info@santecbau.de">info@santecbau.de</a></p>
-          </div>
-
+      
         </div>
+<div class="contact-grid-custom">
 
+  <!-- 1. Bauabteilung -->
+  <div class="contact-box-custom">
+    <img src="images/andreas.jpg"
+         alt="Andreas Riebow"
+         class="contact-photo">
+
+    <div class="contact-details">
+      <h3>Bauabteilung</h3>
+      <p><strong>Andreas Riebow</strong></p>
+      <p>
+        <a href="tel:+491752457654">+49 175 2457654</a>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 2. Kaufmännische Abteilung -->
+  <div class="contact-box-custom">
+    <img src="images/kaufmaennisch.jpg"
+         alt="Kaufmännische Abteilung"
+         class="contact-photo">
+
+    <div class="contact-details">
+      <h3>Kaufmännische Abteilung</h3>
+      <p>Ansprechpartner folgt</p>
+    </div>
+  </div>
+
+
+  <!-- 3. Ibrahim -->
+  <div class="contact-box-custom">
+    <img src="images/ibrahim.jpg"
+         alt="Ibrahim"
+         class="contact-photo">
+
+    <div class="contact-details">
+      <h3>Ibrahim</h3>
+      <p>Lager + Fahrzeuge und Instandhaltung der Werkzeuge</p>
+    </div>
+  </div>
+
+
+  <!-- 4. Allgemeine Anfragen -->
+  <div class="contact-box-custom general-contact">
+    <div class="contact-details">
+      <h3>Allgemeine Anfragen</h3>
+      <p>
+        <a href="mailto:info@santecbau.de">
+          <strong>info@santecbau.de</strong>
+        </a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+.contact-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+.contact-box-custom {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  min-height: 175px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.contact-photo {
+  width: 95px;
+  height: 125px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-details h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.contact-details p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.contact-details a {
+  text-decoration: none;
+}
+
+.general-contact {
+  grid-column: 2;
+  text-align: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+@media (max-width: 950px) {
+  .contact-grid-custom {
+    grid-template-columns: 1fr;
+  }
+
+  .general-contact {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-box-custom {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .contact-photo {
+    width: 75px;
+    height: 100px;
+  }
+}
+</style>
         <form action="https://formspree.io/f/meeeejeg" method="POST">
+          
            <div class="form-grid">
   <div class="full">
   <label>Name / Firma *</label>
