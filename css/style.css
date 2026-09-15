@@ -298,41 +298,87 @@ h2{ color: var(--dark); margin-top: 0; }
   border-bottom: 1px solid var(--line);
 }
 
-.contact-grid{
-  margin-top: 24px auto 0;
+.contact-grid-custom{
+  width: 100%;
+  max-width: 1100px;
+  margin: 24px auto 0;
+
   display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  max-width: 760px;
 }
 
-.contact-box{
+
+/* Keep same style as your previous contact boxes */
+.contact-box-custom{
   background: #fff;
   border: 1px solid var(--line);
-  justify-content: center;
   border-radius: 16px;
   padding: 22px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  text-align: left;
+  min-height: 170px;
 }
 
-.contact-box p{
-  margin: 0;
+
+/* Passport-style rectangular photo */
+.contact-photo{
+  width: 90px;
+  height: 120px;
+
+  object-fit: cover;
+  object-position: center top;
+
+  border-radius: 4px;
+  border: 1px solid var(--line);
+
+  flex-shrink: 0;
 }
 
-.contact-box .contact-name{
-  font-weight: 700;
-  color: #555;
 
+.contact-details{
+  flex: 1;
+  min-width: 0;
 }
 
-.contact-box h3{ margin: 0 0 10px; color: var(--dark); }
 
-.contact-box a{
+.contact-details h3{
+  margin: 0 0 10px;
+  color: var(--dark);
+}
+
+
+.contact-details p{
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+
+.contact-details a{
   color: var(--dark);
   font-weight: 700;
+  text-decoration: none;
 }
 
-.contact-box a:hover{ color: var(--accent); }
+
+.contact-details a:hover{
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+
+/* Fourth box centered underneath */
+.general-contact{
+  grid-column: 2;
+  justify-content: center;
+  text-align: center;
+  min-height: 120px;
+}
 
 /* Form */
 form{
@@ -454,7 +500,7 @@ form button[type="submit"]:hover{
   .service-grid{ grid-template-columns: 1fr; }
   .gal-img{ height: 260px; }
 
-  .contact-grid{ grid-template-columns: 1fr; }
+  .contact-grid-custom{   grid-template-columns: 1fr; }  .general-contact{   grid-column: 1; }
   .form-grid{ grid-template-columns: 1fr; }
 }
 /* ============== Floating Buttons (clean) ============== */
