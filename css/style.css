@@ -298,42 +298,104 @@ h2{ color: var(--dark); margin-top: 0; }
   border-bottom: 1px solid var(--line);
 }
 
-.contact-grid-custom{
+/* ============== Contact Boxes ============== */
+
+.contact-grid-custom {
   width: 100%;
   max-width: 1100px;
   margin: 24px auto 0;
 
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 24px;
 }
 
 
-/* Keep same style as your previous contact boxes */
-.contact-box-custom{
+/* Contact box */
+.contact-box-custom {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 22px;
+
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 
   display: flex;
   align-items: center;
   gap: 18px;
 
+  min-height: 175px;
   text-align: left;
-  min-height: 170px;
 }
 
 
-/* Passport-style rectangular photo */
-.contact-photo{
-  width: 90px;
-  height: 120px;
+/* Passport-style photo */
+.contact-photo {
+  width: 95px;
+  height: 125px;
 
   object-fit: cover;
   object-position: center top;
 
+  border: 1px solid var(--line);
+  border-radius: 3px;
+
+  flex-shrink: 0;
+}
+
+
+/* Text area */
+.contact-details {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* Department title - same format for all 3 boxes */
+.contact-details h3 {
+  margin: 0 0 10px;
+  color: var(--dark);
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+
+/* Name and telephone */
+.contact-details p {
+  margin: 5px 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+
+/* Person's name */
+.contact-details p strong {
+  font-weight: 700;
+}
+
+
+/* Telephone */
+.contact-details a {
+  color: var(--dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+.contact-details a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+
+/* Allgemeine Anfragen centered underneath */
+.general-contact {
+  grid-column: 2;
+  justify-content: center;
+  text-align: center;
+  min-height: 120px;
+}
   border-radius: 4px;
   border: 1px solid var(--line);
 
